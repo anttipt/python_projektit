@@ -8,10 +8,10 @@ Sovelluksen kommentoinnista löytyy tarkemmat kuvaukset toiminnallisuuksista.
 
 Sovelluksen API-avain ladataan openweathermap.org-sivulta.
 
-![openweathermap.org](../kuvat/kuva1.png)
+![openweathermap.org](kuvat/kuva1.png)
 
-![API-avain](../kuvat/kuva2.png)
+![API-avain](kuvat/kuva2.png)
 
-![Sovellus käytännössä](../kuvat/kuva3.png)
+![Sovellus käytännössä](kuvat/kuva3.png)
 
 
