@@ -8,7 +8,7 @@ Sovelluksen kommentoinnista löytyy tarkemmat kuvaukset toiminnallisuuksista.
 
 Sovelluksen API-avain ladataan openweathermap.org-sivulta.
 
-![openweathermap.org](kuvat/kuva1.png)
+<img src="kuvat/kuva1.png" alt="Kuvateksti" title="Tämä näkyy tooltipinä">
 
 ![API-avain](kuvat/kuva2.png)
 
