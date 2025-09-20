@@ -6,12 +6,14 @@ jälkeen sovellus näyttää paikkakunnan lämpötilan, sään kuvauksen sekä t
 Sovellus koostuu kirjaston lataamisesta, hae_saa-if-else-funktiosta sekä main-pääfunktiosta.
 Sovelluksen kommentoinnista löytyy tarkemmat kuvaukset toiminnallisuuksista.
 
+Saat lisätietoa kuvista viemällä hiiren niitten päälle.
+
 Sovelluksen API-avain ladataan openweathermap.org-sivulta.
 
-<img src="kuvat/kuva1.png" alt="Kuvateksti" title="Tämä näkyy tooltipinä">
+<img src="kuvat/kuva1.png" alt="openweathermap.org" title="openweathermap.org">
 
-![API-avain](kuvat/kuva2.png)
+<img src="kuvat/kuva2.png" alt="API-avain" title="API-avain">
 
-![Sovellus käytännössä](kuvat/kuva3.png)
+<img src="kuvat/kuva3.png" alt="Itse sovellus" title="Itse sovellus">
 
 
