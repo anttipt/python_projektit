@@ -1,9 +1,9 @@
 # python_projektit
 Erilaisia python-koodilla tehtyjä projekteja
-# Testi
 
 
-Peruskäsitteet python-ohjelmointikielessä:
+
+# Peruskäsitteet python-ohjelmointikielessä:
 
 Muuttuja (variable) Säilöö tietoa ohjelman ajaksi. Esim. nimi = "Antti" tallentaa tekstin muuttujaan nimi.
 
