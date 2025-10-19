@@ -14,17 +14,30 @@ def save_tasks(tasks):
     with open(TASKS_FILE, "w") as f:
         json.dump(tasks, f, indent=2)
 
+# päivitetään list_tasks()-funktio
 def list_tasks(tasks):
     if not tasks:
         print("Ei tehtäviä.")
+        return
     for i, task in enumerate(tasks):
         status = "✔" if task["done"] else "✘"
-        print(f"{i + 1}. [{status}] {task['title']}")
+        deadline = task.get("deadline", "ei asetettu")
+        priority = task.get("priority", "ei asetettu")
+        print(f"{i + 1}. [{status}] {task['title']} | Deadline: {deadline} | Prioriteetti: {priority}")
 
-def add_task(tasks, title):
-    tasks.append({"title": title, "done": False})
+
+# päivitetään add_task()-funktio
+def add_task(tasks, title, deadline=None, priority="medium"):
+    task = {
+        "title": title,
+        "done": False,
+        "deadline": deadline,
+        "priority": priority
+    }
+    tasks.append(task)
     save_tasks(tasks)
-    print(f"Lisätty: {title}")
+    print(f"Lisätty: {title} (Deadline: {deadline}, Prioriteetti: {priority})")
+
 
 def delete_task(tasks, index):
     try:
@@ -41,16 +54,28 @@ def mark_done(tasks, index):
         print(f"Merkitty tehdyksi: {tasks[index]['title']}")
     except IndexError:
         print("Virheellinen indeksi.")
-
+# selkeytetty sovelluksen käyttöohjetta
 def main():
     tasks = load_tasks()
+    print("\n📋 Kirjoita komento ja paina enter. Komennot käytettäväksi:")
+    print("  tehtävälistaus                 - Näytä kaikki tehtävät")
+    print("  lisää <otsikko> | <deadline> | <prioriteetti>")
+    print("                                 - Lisää uusi tehtävä")
+    print("                                     Esim: lisää Kirjoita README | 2025-10-31 | high")
+    print("  poista <numero>                - Poista tehtävä")
+    print("  merkkaa tehdyksi <numero>      - Merkitse tehtävä tehdyksi")
+    print("  lopeta                         - Poistu sovelluksesta")
+
     while True:
-        print("\nKirjoita komento ja paina enter: tehtävälistaus, lisää <tehtävän kuvaus>, poista <tehtävän numero>, merkkaa tehdyksi <tehtävän numero>, lopeta")
-        cmd = input(">> ").strip()
+        cmd = input("\n>> ").strip()
         if cmd == "tehtävälistaus":
             list_tasks(tasks)
         elif cmd.startswith("lisää "):
-            add_task(tasks, cmd[4:])
+            parts = cmd[4:].split(" | ")
+            title = parts[0]
+            deadline = parts[1] if len(parts) > 1 else None
+            priority = parts[2] if len(parts) > 2 else "medium"
+            add_task(tasks, title, deadline, priority)
         elif cmd.startswith("poista "):
             delete_task(tasks, int(cmd[4:]) - 1)
         elif cmd.startswith("merkkaa tehdyksi "):

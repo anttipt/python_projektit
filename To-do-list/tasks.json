@@ -2,5 +2,17 @@
   {
     "title": "testaa sovellus",
     "done": true
+  },
+  {
+    "title": "\u00e4",
+    "done": false,
+    "deadline": "2025-10-19",
+    "priority": "medium"
+  },
+  {
+    "title": "\u00e4 testaa koodia",
+    "done": false,
+    "deadline": "2025-19-10",
+    "priority": "high"
   }
 ]
