@@ -58,13 +58,13 @@ def mark_done(tasks, index):
 def main():
     tasks = load_tasks()
     print("\n📋 Kirjoita komento ja paina enter. Komennot käytettäväksi:")
-    print("  tehtävälistaus                 - Näytä kaikki tehtävät")
+    print("  tehtävälistaus                            - Näytä kaikki tehtävät")
     print("  lisää <otsikko> | <deadline> | <prioriteetti>")
-    print("                                 - Lisää uusi tehtävä")
-    print("                                     Esim: lisää Kirjoita README | 2025-10-31 | high")
-    print("  poista <numero>                - Poista tehtävä")
-    print("  merkkaa tehdyksi <numero>      - Merkitse tehtävä tehdyksi")
-    print("  lopeta                         - Poistu sovelluksesta")
+    print("                                             - Lisää uusi tehtävä")
+    print("                                                 Esim: lisää Kirjoita README | 2025-10-31 | high")
+    print("  poista <tehtävän numero>                   - Poista tehtävä")
+    print("  merkkaa tehdyksi <tehtävän numero>         - Merkitse tehtävä tehdyksi")
+    print("  lopeta                                     - Poistu sovelluksesta")
 
     while True:
         cmd = input("\n>> ").strip()

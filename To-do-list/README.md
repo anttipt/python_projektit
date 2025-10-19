@@ -28,13 +28,13 @@ python todo.py
 Sovelluksessa käytettävät komennot:
 
 ```
-list                 - Näytä kaikki tehtävät
-add <otsikko> | <deadline> | <prioriteetti>
-                     - Lisää uusi tehtävä
-						Esim: add Kirjoita README | 2025-10-31 | high
-del <numero>         - Poista tehtävä
-done <numero>        - Merkitse tehtävä tehdyksi
-exit                 - Poistu sovelluksesta
+tehtävälistaus                 				- Näytä kaikki tehtävät
+lisää <otsikko> | <deadline> | <prioriteetti>
+											- Lisää uusi tehtävä
+												Esim: add Kirjoita README | 2025-10-31 | high
+poista <tehtävän numero>         			- Poista tehtävä
+merkkaa tehdyksi <tehtävän numero>        	- Merkitse tehtävä tehdyksi
+lopeta                 						- Poistu sovelluksesta
 ```
 
 
@@ -51,11 +51,11 @@ exit                 - Poistu sovelluksesta
 
 ## 🧪 Esimerkki
 ```
->> add Kirjoita README | 2025-10-31 | high
->> list
+>> lisää Kirjoita README | 2025-10-31 | high
+>> tehtävälistaus
 1. [✘] Kirjoita README | Deadline: 2025-10-31 | Prioriteetti: high
->> done 1
->> list
+>> merkkaa tehdyksi 1
+>> tehtävälistaus
 1. [✔] Kirjoita README | Deadline: 2025-10-31 | Prioriteetti: high
 ```
 
